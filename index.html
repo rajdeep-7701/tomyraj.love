@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiny World For My Raj 💖</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #fff0f3;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        width: 100%;
+        max-width: 430px;
+        min-height: 100vh;
+        background: #fff5f7;
+        position: relative;
+      }
+      .slide {
+        display: none;
+        padding: 25px 20px;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: fadeIn 0.6s;
+      }
+      .slide.active {
+        display: flex;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      h1 {
+        font-family: "Pacifico", cursive;
+        color: #d14a6d;
+        font-size: 34px;
+        line-height: 1.2;
+      }
+      .btn {
+        width: 85%;
+        padding: 15px;
+        background: linear-gradient(135deg, #ff8fa3, #e85d75);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 17px;
+        font-weight: 600;
+        margin: 10px;
+        cursor: pointer;
+        box-shadow: 0 6px 18px rgba(232, 93, 117, 0.4);
+      }
+      .btn-light {
+        background: #ffe4ea;
+        color: #d14a6d;
+        border: 2px solid #ffb6c8;
+      }
+      .q-box {
+        background: white;
+        border-radius: 25px;
+        padding: 28px 20px;
+        width: 90%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border: 2px solid #ffd6de;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        width: 100%;
+        margin: 20px 0;
+      }
+      .polaroid {
+        background: white;
+        padding: 8px 8px 28px 8px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .ph {
+        height: 115px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #fff0f3;
+      }
+      .ph img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .caption {
+        font-family: "Pacifico", cursive;
+        font-size: 11px;
+        color: #8b4a5a;
+        margin-top: 8px;
+      }
+      .song-box {
+        background: linear-gradient(135deg, #ff8fa3, #e85d75);
+        color: white;
+        border-radius: 20px;
+        padding: 25px;
+        width: 90%;
+        margin: 20px 0;
+      }
+      .final-msg {
+        background: white;
+        border-radius: 25px;
+        padding: 28px 22px;
+        width: 92%;
+        line-height: 1.8;
+        color: #5a3a42;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border: 2px solid #ffd6de;
+        font-size: 15px;
+        text-align: left;
+      }
+      .card {
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        width: 90%;
+        margin: 10px 0;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        border: 2px solid #ffd6de;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 1 -->
+      <div class="slide active" id="s1">
+        🎀
+        <h1>Happy<br />Boyfriend's Day!</h1>
+        <p style="color: #8b4a5a; margin: 15px 0">
+          To my Raj (unpampered) bachha<br />with love 💌
+        </p>
+        <div
+          style="
+            width: 250px;
+            height: 250px;
+            background: #ffe4ea;
+            border-radius: 50%;
+            border: 4px dashed #ffb6c8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            margin: 20px;
+          "
+        >
+          👦🏻🏡✨
+        </div>
+        <p style="color: #8b4a5a; font-size: 12px">
+          — a tiny world just for you —
+        </p>
+        <button class="btn" onclick="go(2)">Enter my tiny world →</button>
+      </div>
+      <!-- 2 -->
+      <div class="slide" id="s2">
+        🎀 Do you love me? 🎀
+        <div class="q-box">
+          <div style="font-family: Pacifico; font-size: 30px; color: #d14a6d">
+            Do you love<br />your bachha?
+          </div>
+          <p style="font-size: 11px; color: #a0707c; margin-top: 10px">
+            we both know answer is YES ♡
+          </p>
+        </div>
+        <button class="btn" onclick="go(3)">🤍 YES</button
+        ><button class="btn btn-light" onclick="go(3)">🎀 OFC YES</button>
+      </div>
+      <!-- 3 WHY TINY WORLD -->
+      <div class="slide" id="s3">
+        🌍 Why you are my tiny world 🌍
+        <h2 style="font-family: Pacifico; color: #d14a6d; margin: 10px">
+          You are my home
+        </h2>
+        <div class="card">
+          🏠 <b>My Safe Place</b><br /><span style="font-size: 13px"
+            >When no one cared, you did. You made my unpampered heart feel
+            pampered.</span
+          >
+        </div>
+        <div class="card">
+          🧸 <b>My Bachha</b><br /><span style="font-size: 13px"
+            >You love my inner child like no one else ever did.</span
+          >
+        </div>
+        <div class="card">
+          ✨ <b>My Forever</b><br /><span style="font-size: 13px"
+            >You didn't just love me, you healed me.</span
+          >
+        </div>
+        <button class="btn" onclick="go(4)">See our memories →</button>
+      </div>
+      <!-- 4 PHOTOS - PERMANENT -->
+      <div class="slide" id="s4">
+        ✨ Our Favourite Photos ✨
+        <div class="grid">
+          <div class="polaroid">
+            <div class="ph"><img src="IMAGE_1_LINK_HERE" /></div>
+            <div class="caption">1. The First Photo ♡</div>
+          </div>
+          <div class="polaroid">
+            <div class="ph"><img src="IMAGE_2_LINK_HERE" /></div>
+            <div class="caption">2. Eating Together ♡</div>
+          </div>
+          <div class="polaroid">
+            <div class="ph"><img src="IMAGE_3_LINK_HERE" /></div>
+            <div class="caption">3. My Fav Walk</div>
+          </div>
+          <div class="polaroid">
+            <div class="ph"><img src="IMAGE_4_LINK_HERE" /></div>
+            <div class="caption">4. Your Goofy Smile ☺</div>
+          </div>
+          <div class="polaroid">
+            <div class="ph"><img src="IMAGE_5_LINK_HERE" /></div>
+            <div class="caption">5. Our Silly Selfie ☆</div>
+          </div>
+          <div class="polaroid">
+            <div class="ph"><img src="IMAGE_6_LINK_HERE" /></div>
+            <div class="caption">6. My Safe Place ♡</div>
+          </div>
+        </div>
+        <button class="btn" onclick="go(5)">Next →</button>
+      </div>
+      <!-- 5 SMALL THINGS -->
+      <div class="slide" id="s5">
+        💖 Small things I love about you 💖
+        <div class="card">☺️ Your goofy smile when you try to be serious</div>
+        <div class="card">🍝 How you feed me like a baby</div>
+        <div class="card">🌙 Our late night walks and talks</div>
+        <div class="card">🤳 Your silly selfies that make my day</div>
+        <button class="btn" onclick="go(6)">Our song →</button>
+      </div>
+      <!-- 6 SONG - PERMANENT -->
+      <div class="slide" id="s6">
+        🎵 Our Song 🎵
+        <h2 style="font-family: Pacifico; color: #d14a6d; font-size: 28px">
+          A song for us
+        </h2>
+        <div class="song-box">
+          <p style="margin-bottom: 15px">This reminds me of us...</p>
+          <a
+            href="YOUR_SONG_LINK_HERE"
+            target="_blank"
+            style="text-decoration: none"
+            ><button
+              class="btn"
+              style="width: 100%; background: white; color: #d14a6d"
+            >
+              Play Our Song 💖
+            </button></a
+          >
+          <p style="font-size: 12px; margin-top: 15px">
+            Tap to play on Spotify / YouTube
+          </p>
+        </div>
+        <button class="btn" onclick="go(7)">Open letters →</button>
+      </div>
+      <!-- 7 OPEN WHEN LETTERS -->
+      <div class="slide" id="s7">
+        💌 Open when you miss me 💌
+        <div
+          class="card"
+          onclick="
+            alert(
+              'When you miss me: I am always here, in your tiny world, loving you! ❤️',
+            )
+          "
+        >
+          📩 Open when you miss me
+        </div>
+        <div
+          class="card"
+          onclick="
+            alert(
+              'When you are sad: Remember how much your bachha loves you! You are my everything Raj ❤️',
+            )
+          "
+        >
+          📩 Open when you are sad
+        </div>
+        <div
+          class="card"
+          onclick="
+            alert(
+              'When you feel unpampered: I will pamper you like you pampered me! Forever yours ❤️',
+            )
+          "
+        >
+          📩 Open when you need love
+        </div>
+        <button class="btn" onclick="go(8)">Final message →</button>
+      </div>
+      <!-- 8 FINAL MESSAGE -->
+      <div class="slide" id="s8">
+        💌 Final Message 💌
+        <div class="final-msg">
+          <p>Hi my Raj,</p>
+          <br />
+          <p><b>I greatly value how you took care of me when no one did.</b></p>
+          <br />
+          <p>
+            When I felt unpampered and alone, you came and loved my inner bachha
+            like no one else ever did.
+          </p>
+          <br />
+          <p>
+            You didn't just love me, you healed me. You pampered the part of me
+            that no one even noticed.
+          </p>
+          <br />
+          <p>
+            Thank you for being my home, my comfort, my safe place. You are my
+            tiny world, and I want to live in it forever.
+          </p>
+          <br />
+          <p
+            style="
+              text-align: right;
+              font-family: Pacifico;
+              color: #d14a6d;
+              font-size: 18px;
+            "
+          >
+            Forever yours,<br />Your bachha ❤️
+          </p>
+        </div>
+        <button class="btn" onclick="alert('He will cry! Send it now! ❤️')">
+          I love you too bachha →
+        </button>
+      </div>
+    </div>
+    <script>
+      function go(n) {
+        document
+          .querySelectorAll(".slide")
+          .forEach((s) => s.classList.remove("active"));
+        document.getElementById("s" + n).classList.add("active");
+        window.scrollTo(0, 0);
+      }
+    </script>
+  </body>
+</html>
